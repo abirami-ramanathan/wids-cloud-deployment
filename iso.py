@@ -387,9 +387,9 @@ def main():
     print("FINAL VERDICT")
     print("="*80)
     
-    print(f"\n✅ Best contamination based on F1 Score: {best['contamination']} (F1 = {best['f1']:.3f})")
+    print(f"\nBest contamination based on F1 Score: {best['contamination']} (F1 = {best['f1']:.3f})")
     
-    print("\n📊 Analysis:")
+    print("\nAnalysis:")
     for r in results:
         if r['contamination'] == 0.001:
             print(f"   • 0.001: Detects {r['anomalies']} anomalies (Recall={r['recall']:.3f}) - Too conservative, misses many attacks")
@@ -398,13 +398,13 @@ def main():
         elif r['contamination'] == 0.1:
             print(f"   • 0.1: Detects {r['anomalies']} anomalies (Precision={r['precision']:.3f}) - Too aggressive, many false positives")
     
-    print("\n🏆 CONCLUSION:")
+    print("\nCONCLUSION:")
     print("   Contamination = 0.01 provides the best balance between")
     print("   precision and recall, making it the optimal choice.")
     print("   This matches the research paper's recommendation.")
     
     print("\n" + "="*80)
-    print("✅ COMPLETE - Check generated PNG files")
+    print("COMPLETE - Check generated PNG files")
     print("="*80)
     print("\nGenerated files:")
     print("   • contamination_0.001_pca.png")

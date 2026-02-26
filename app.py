@@ -30,7 +30,7 @@ def simulate():
 
 @app.route("/detect")
 def detect():
-    result = subprocess.run(["python", "iso.py"], capture_output=True, text=True)
+    result = subprocess.run(["python", "iso1.py"], capture_output=True, text=True)
     return f"<pre>{result.stdout}</pre>"
 
 if __name__ == "__main__":
